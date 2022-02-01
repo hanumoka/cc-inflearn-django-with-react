@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # Third Apps
     'debug_toolbar',
     # Locals Apps
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -84,6 +85,9 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# 커스텀 User 모델 지정
+AUTH_USER_MODEL = "accounts.User"
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
