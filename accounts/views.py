@@ -1,7 +1,9 @@
 from django.contrib import messages
+from django.contrib.auth.views import LoginView
 from django.shortcuts import redirect, render
 from .forms import SignupForm
 
+login = LoginView.as_view(template_name="accounts/login_form.html")
 
 def signup(request):
     if request.method == 'POST':
