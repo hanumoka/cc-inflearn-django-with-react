@@ -1,1 +1,1 @@
--r requirements/prox.txt
+-r requirements/prod.txt
