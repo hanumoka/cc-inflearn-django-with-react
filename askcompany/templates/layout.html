@@ -49,15 +49,10 @@
                                       fill-rule="evenodd"></path>
                             </svg>
                         </a>
-                        <a class="p-2 text-dark" href="">
+                        <a class="p-2 text-dark" href="{% url "profile_edit" %}">
                             {{ user }}
                             Profile
                         </a>
-                        {#                        <a class="p-2 text-dark" href="{% url "profile_edit" %}">#}
-                        {#                        <a class="p-2 text-dark" href="">#}
-                        {#                            <img src="{{ user.avatar_url }}" class="rounded-circle" style="width: 24px; height: 24px;"/>#}
-                        {#                        </a>#}
-{#                        <a class="btn btn-outline-primary" href="#">Sign up</a>#}
                     </nav>
                 </div>
             </div>
