@@ -9,6 +9,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
+    path('', include('instagram.urls')),
     path('', login_required(TemplateView.as_view(template_name='root.html')), name="root"),
 ]
 
