@@ -14,5 +14,9 @@ class User(AbstractUser):
     phone_number = models.CharField(max_length=13, blank=True, validators=[RegexValidator(r"^010-?[1-9]\d{3}-?\d{4}$")])
     gender = models.CharField(max_length=1, blank=True, choices=GenderChoices.choices, default=GenderChoices.MALE)
 
+    @property
+    def name(self):
+        return f"{self.first_name} {self.last_name}"
+
 # class Profile(models.Model):
 #     pass

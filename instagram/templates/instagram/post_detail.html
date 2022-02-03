@@ -1,0 +1,26 @@
+{% extends "instagram/layout.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header"> {{ post.author.name }}</div>
+                    <div class="card-body">
+                        이미지 업로드 기능은 생략함
+                    </div>
+                    <div class="card-footer">
+                        {% for tag in post.tag_set.all %}
+                            <span class="badge badge-primary">
+                                #{{ tag.name }}
+                            </span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
